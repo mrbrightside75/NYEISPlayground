@@ -22,3 +22,7 @@ Welcome to the NYS Early Intervention System Playground. This application is des
 -   Real-time search and filtering functionalities
 -   Data storage using local storage for persistent sessions
 -   Interactive elements for hands-on training
+
+## Project Members
+
+Joseph Smith
