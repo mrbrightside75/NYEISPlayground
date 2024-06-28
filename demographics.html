@@ -31,7 +31,7 @@
                 <link rel="stylesheet" href="style.css" />
             </head>
             <body>
-                <form onsubmit="referralSourceSubmit(event)">
+                <form id="referralForm">
                     <div class="row">
                         <div class="col">
                             <header class="header" id="headerOrange">
@@ -61,7 +61,8 @@
                             <div class="col-3">
                                 <select id="demoStatusAssigned" required>
                                     <option></option>
-                                    <option>Something</option>
+                                    <option>At Risk</option>
+                                    <option>Suspected of Delay</option>
                                 </select>
                             </div>
                         </div>
@@ -681,6 +682,43 @@
                             </div>
                             <!-- End of Fourth Header Row -->
                         </div>
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>Caregiver Name (If Other Than Parent):</p>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" id="demoAltCaregiverName" />
+                            </div>
+                            <div class="col-3 formHeader">
+                                <p>Caregiver's Relationship:</p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoCaregiverRelationship">
+                                    <option></option>
+                                    <option>Test</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>Child's Living Arrangement:</p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoChildsLivingArrangement">
+                                    <option></option>
+                                    <option>Test</option>
+                                </select>
+                            </div>
+                            <div class="col-3 formHeader">
+                                <p>Child's School District:</p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoCaregiverRelationship">
+                                    <option></option>
+                                    <option>Test</option>
+                                </select>
+                            </div>
+                        </div>
                     </section>
                     <!-- Comm Exception Section-->
                     <section>
@@ -692,6 +730,36 @@
                             </div>
                             <!-- End of Fourth Header Row -->
                         </div>
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>Method:</p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoMethod">
+                                    <option></option>
+                                    <option>Test</option>
+                                </select>
+                            </div>
+                            <div class="col-3 formHeader">
+                                <p>Reason:</p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoReason">
+                                    <option></option>
+                                    <option>Test</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>From:</p>
+                            </div>
+                            <div class="col-3">Search function</div>
+                            <div class="col-3 formHeader">
+                                <p>To:</p>
+                            </div>
+                            <div class="col-3">Search function</div>
+                        </div>
                     </section>
                     <!-- Suspected of Delay Referral Details Section -->
                     <section>
@@ -702,6 +770,169 @@
                                 </header>
                             </div>
                             <!-- End of Fourth Header Row -->
+                        </div>
+                        <!-- Row 1 -->
+                        <div class="row">
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoPrimaryReferralReason"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Primary Referral Reason</p>
+                            </div>
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoSecondaryReferralReason"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Secondary Referral Reason</p>
+                            </div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="row">
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoPrimaryConfirmed"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Confirmed Diagnosed Condition</p>
+                            </div>
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoSecondaryConfirmed"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Confirmed Diagnosed Condition</p>
+                            </div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="row">
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoPrimaryAdaptive"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Adaptive</p>
+                            </div>
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoSecondaryAdaptive"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Adaptive</p>
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="row">
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoPrimaryCognitive"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Cognitive</p>
+                            </div>
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoSecondaryCognitive"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Cognitive</p>
+                            </div>
+                        </div>
+                        <!-- Row 5 -->
+                        <div class="row">
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoPrimaryCommunication"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Communication</p>
+                            </div>
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoSecondaryCommunication"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Communication</p>
+                            </div>
+                        </div>
+                        <!-- Row 6 -->
+                        <div class="row">
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoPrimarySocialEmotional"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Social/Emotional</p>
+                            </div>
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoSecondarySocialEmotional"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Social/Emotional</p>
+                            </div>
+                        </div>
+                        <!-- Row 7 -->
+                        <div class="row">
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoPrimaryPhysical"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Physical</p>
+                            </div>
+                            <div class="col-1 formHeader">
+                                <input
+                                    type="checkbox"
+                                    id="demoSecondaryPhysical"
+                                />
+                            </div>
+                            <div class="col-5 formHeader">
+                                <p>Physical</p>
+                            </div>
+                        </div>
+                        <!-- Row 8 -->
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>Diagnosis (If Known):</p>
+                            </div>
+                            <div class="col-3">Search button</div>
+                            <div class="col-3 formHeader">
+                                <p>Transfer from Municipality:</p>
+                            </div>
+                            <div class="col-3">
+                                <input
+                                    type="checkbox"
+                                    id="demoTransferFromMunicipality"
+                                />
+                            </div>
                         </div>
                     </section>
                     <!-- At Risk and Failed Newborn Hearing Screening Referral Details Section -->
@@ -715,6 +946,34 @@
                             </div>
                             <!-- End of Fourth Header Row -->
                         </div>
+                        <div class="row">
+                            <div class="col-4 formHeader">
+                                <p>Risk Indicators:</p>
+                            </div>
+                            <div class="col-8">
+                                <select id="demoRiskIndicator">
+                                    <option></option>
+                                    <option>Something</option>
+                                    <option>Goes</option>
+                                    <option>Here</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 formHeader">
+                                <p>
+                                    Other Risk Criteria That May Be Considered:
+                                </p>
+                            </div>
+                            <div class="col-8">
+                                <select id="demoRiskCriteria">
+                                    <option></option>
+                                    <option>Something</option>
+                                    <option>Goes</option>
+                                    <option>Here</option>
+                                </select>
+                            </div>
+                        </div>
                     </section>
                     <!-- Place of Birth Section -->
                     <section>
@@ -723,6 +982,91 @@
                                 <header class="header">Place of Birth</header>
                             </div>
                             <!-- End of Fourth Header Row -->
+                        </div>
+                        <!-- Row 1 -->
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>Birth Hospital (If born in New York)</p>
+                            </div>
+                            <div class="col-3">
+                                <input id="demoBirthHospital" type="text" />
+                            </div>
+                            <div class="col-3 formHeader">
+                                <p>
+                                    Location of Birth (If born outside of New
+                                    York)
+                                </p>
+                            </div>
+                            <div class="col-3">
+                                <input id="demoBirthLocation" type="text" />
+                            </div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>Birth County</p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoBirthCounty">
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col-3 formHeader">
+                                <p>
+                                    State of Birth (If born outside of New York)
+                                </p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoStateOfBirth">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>Country of Birth</p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoCountryOfBirth">
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col-3 formHeader">
+                                <p>Birth Weight</p>
+                            </div>
+                            <div class="col-3">
+                                <input id="demoBirthWeight" type="text" />
+                            </div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>
+                                    Hospitalization Status At Time of Referral
+                                </p>
+                            </div>
+                            <div class="col-3">
+                                <select id="demoHospitalizationStatus">
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col-3 formHeader">
+                                <p>If Hospitalized, Facility Name</p>
+                            </div>
+                            <div class="col-3">
+                                <input
+                                    id="demoHospitalFacility Name"
+                                    type="text"
+                                />
+                            </div>
+                        </div>
+                        <!-- Row 5 -->
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>If Not Hospitalized, Discharge Date</p>
+                            </div>
+                            <div class="col-3">Search function</div>
                         </div>
                     </section>
                     <!-- PCP Section -->
@@ -735,6 +1079,20 @@
                             </div>
                             <!-- End of Fourth Header Row -->
                         </div>
+                        <div class="row">
+                            <div class="col-3 formHeader">
+                                <p>PCP Name</p>
+                            </div>
+                            <div class="col-3">
+                                <input id="demoPCPName" type="text" />
+                            </div>
+                            <div class="col-3 formHeader">
+                                <p>PCP Phone</p>
+                            </div>
+                            <div class="col-3">
+                                <input id="demoPCPPhone" type="number" />
+                            </div>
+                        </div>
                     </section>
                     <!-- Comments Section -->
                     <section>
@@ -743,6 +1101,11 @@
                                 <header class="header">Comments</header>
                             </div>
                             <!-- End of Fourth Header Row -->
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input id="demoComment" type="text" />
+                            </div>
                         </div>
                     </section>
                     <div class="row">
@@ -765,7 +1128,7 @@
                     </div>
                 </form>
 
-                <script></script>
+                <script src="demographics.js"></script>
             </body>
         </html>
 

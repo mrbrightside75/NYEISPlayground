@@ -14,7 +14,9 @@
         /* margin-left: auto; */
     }
 }
-
+p {
+    margin: 0;
+}
 nav {
     font-size: 23px;
     a {
@@ -49,14 +51,21 @@ ul {
     background-color: rgb(206, 234, 243);
     margin-top: 2px;
     margin-bottom: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    max-height: 45px;
 }
+
 form {
     margin-top: 10px;
     input {
         width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
     select {
         width: 100%;
+        margin-top: 5px;
     }
 }
 button {
