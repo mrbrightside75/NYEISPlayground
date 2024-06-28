@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Clear the form or redirect as necessary
             form.reset(); // Optional: reset the form
-            // window.location.href = "/"; // Optional: redirect after storing data
+            window.location.href = "/"; // Optional: redirect after storing data
         });
     } else {
         console.error("Form not found");
